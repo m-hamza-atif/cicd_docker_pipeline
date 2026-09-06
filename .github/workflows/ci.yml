@@ -2,8 +2,14 @@ name: continuous integration
 on:
   push:
     branches: [ "main", "dev" ]
+    paths-ignore:
+      - '**.md'
+      - '.github/workflows/**.yml'
   pull_request:
     branches: [ "main" ]
+    paths-ignore:
+      - '**.md'
+      - '.github/workflows/**.yml'
 
 jobs:
   test:
